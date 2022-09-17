@@ -1,6 +1,5 @@
 # Build stage
 FROM node:16 as build
-RUN npm install -g yarn
 
 WORKDIR /src
 COPY . ./
