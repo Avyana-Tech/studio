@@ -4,7 +4,7 @@ FROM node:16 as build
 WORKDIR /src
 COPY . ./
 
-RUN yarn install --immutable
+RUN yarn install
 RUN yarn run web:build:prod
 
 # Release stage
