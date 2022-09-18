@@ -1,12 +1,12 @@
 name: Create and publish a Docker image
 
 on:
-  push:
-    branches: main
+  release:
+    types: [released]
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/avyana
+  IMAGE_NAME: ${{ github.repository }}/avyana/${{ github.event.release.tag_name }}
 
 jobs:
   docker:

@@ -1,6 +1,6 @@
 {
   "name": "avyana-studio",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Integrated robotics visualization and debugging.",
   "productName": "Avyana Studio",
   "productDescription": "Avyana Studio is a highly customizable and extensible visualization and display tool for robotics.",
