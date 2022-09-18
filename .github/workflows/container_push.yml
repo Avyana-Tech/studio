@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: avyana/${{ github.respository }}
+  IMAGE_NAME: avyana_studio
 
 jobs:
   docker:
