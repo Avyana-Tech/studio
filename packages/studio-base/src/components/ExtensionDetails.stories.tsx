@@ -56,7 +56,7 @@ const extension: ExtensionMarketplaceDetail = {
   version: "1.2.10",
   readme: "https://foxglove.dev/storyextension/readme",
   changelog: "https://foxglove.dev/storyextension/changelog",
-  foxe: "https://foxglove.dev/storyextension/extension.foxe",
+  avy: "https://foxglove.dev/storyextension/extension.avy",
   keywords: ["storybook", "testing"],
   time: {
     modified: "2021-05-19T21:37:40.166Z",

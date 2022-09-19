@@ -52,8 +52,8 @@ describe("IdbExtensionLoader", () => {
     });
 
     it("Installs local extensions", async () => {
-      const foxe = fs.readFileSync(
-        `${__dirname}/../test/fixtures/foxglove.studio-extension-turtlesim-0.0.1.foxe`,
+      const avy = fs.readFileSync(
+        `${__dirname}/../test/fixtures/foxglove.studio-extension-turtlesim-0.0.1.avy`,
       );
 
       const expectedInfo = {
@@ -65,18 +65,18 @@ describe("IdbExtensionLoader", () => {
       mockDBGetAll.mockReturnValue([expectedInfo]);
 
       const loader = new IdbExtensionLoader("local");
-      await loader.installExtension(foxe);
+      await loader.installExtension(avy);
 
       expect(mockDBPut).toHaveBeenCalledWith("metadata", expectedInfo);
 
-      expect(mockDBPut).toHaveBeenCalledWith("extensions", { content: foxe, info: expectedInfo });
+      expect(mockDBPut).toHaveBeenCalledWith("extensions", { content: avy, info: expectedInfo });
 
       expect((await loader.getExtensions())[0]).toBe(expectedInfo);
     });
 
     it("Installs private extensions", async () => {
-      const foxe = fs.readFileSync(
-        `${__dirname}/../test/fixtures/foxglove.studio-extension-turtlesim-0.0.1.foxe`,
+      const avy = fs.readFileSync(
+        `${__dirname}/../test/fixtures/foxglove.studio-extension-turtlesim-0.0.1.avy`,
       );
 
       const expectedInfo = {
@@ -88,12 +88,12 @@ describe("IdbExtensionLoader", () => {
       mockDBGetAll.mockReturnValue([expectedInfo]);
 
       const loader = new IdbExtensionLoader("org");
-      await loader.installExtension(foxe);
+      await loader.installExtension(avy);
 
       expect(mockDBPut).toHaveBeenCalledWith("metadata", expectedInfo);
 
       expect(mockDBPut).toHaveBeenCalledWith("extensions", {
-        content: foxe,
+        content: avy,
         info: expectedInfo,
       });
 
@@ -101,7 +101,7 @@ describe("IdbExtensionLoader", () => {
     });
 
     it("Parses package prefixes", async () => {
-      const foxe = fs.readFileSync(`${__dirname}/../test/fixtures/prefixed-name-extension.foxe`);
+      const avy = fs.readFileSync(`${__dirname}/../test/fixtures/prefixed-name-extension.avy`);
       const expectedInfo = {
         id: "Prefix.package-name",
         name: "package-name",
@@ -113,12 +113,12 @@ describe("IdbExtensionLoader", () => {
       mockDBGetAll.mockReturnValue([expectedInfo]);
 
       const loader = new IdbExtensionLoader("org");
-      await loader.installExtension(foxe);
+      await loader.installExtension(avy);
 
       expect(mockDBPut).toHaveBeenCalledWith("metadata", expectedInfo);
 
       expect(mockDBPut).toHaveBeenCalledWith("extensions", {
-        content: foxe,
+        content: avy,
         info: expectedInfo,
       });
 

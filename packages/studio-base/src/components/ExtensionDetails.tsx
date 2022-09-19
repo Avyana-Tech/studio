@@ -49,7 +49,7 @@ export function ExtensionDetails({ extension, onClose, installed }: Props): Reac
   const { enqueueSnackbar } = useSnackbar();
   const readmeUrl = extension.readme;
   const changelogUrl = extension.changelog;
-  const canInstall = extension.foxe != undefined;
+  const canInstall = extension.avy != undefined;
   const canUninstall = extension.namespace !== "org";
 
   const { value: readmeContent } = useAsync(
@@ -71,10 +71,10 @@ export function ExtensionDetails({ extension, onClose, installed }: Props): Reac
       return;
     }
 
-    const url = extension.foxe;
+    const url = extension.avy;
     try {
       if (url == undefined) {
-        throw new Error(`Cannot install extension ${extension.id}, "foxe" URL is missing`);
+        throw new Error(`Cannot install extension ${extension.id}, "avy" URL is missing`);
       }
       const data = await downloadExtension(url);
       await installExtension("local", data);
@@ -91,7 +91,7 @@ export function ExtensionDetails({ extension, onClose, installed }: Props): Reac
     analytics,
     downloadExtension,
     enqueueSnackbar,
-    extension.foxe,
+    extension.avy,
     extension.id,
     installExtension,
     isMounted,

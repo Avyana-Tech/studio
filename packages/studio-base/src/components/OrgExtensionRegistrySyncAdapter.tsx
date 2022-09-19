@@ -37,7 +37,7 @@ export function OrgExtensionRegistrySyncAdapter(): ReactNull {
   const installRemoteExtension = useCallback(
     async (id: string) => {
       const metaData = await api.getExtension(id);
-      const dataResponse = await fetch(metaData.foxe);
+      const dataResponse = await fetch(metaData.avy);
       const data = new Uint8Array(await dataResponse.arrayBuffer());
       await installExtension("org", data);
     },

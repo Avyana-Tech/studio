@@ -61,7 +61,7 @@ describe("Private registry sync adapter", () => {
       { name: "private-installed-1", activeVersion: "2" },
       { name: "private-installed-2", activeVersion: "1" },
     ]);
-    getExtension.mockReturnValue({ foxe: "url" });
+    getExtension.mockReturnValue({ avy: "url" });
 
     fetchMock.get("url", new Uint8Array());
 

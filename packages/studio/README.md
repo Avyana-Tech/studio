@@ -1,4 +1,4 @@
-# Foxglove Studio Extension API
+# Avyana Studio Extension API
 
 This package contains type definitions for writing [Foxglove Studio](https://foxglove.dev/) extensions.
 

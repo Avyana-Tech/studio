@@ -173,7 +173,7 @@ export default function Workspace(props: WorkspaceProps): JSX.Element {
 
   // file types we support for drag/drop
   const allowedDropExtensions = useMemo(() => {
-    const extensions = [".foxe", ".urdf", ".xacro"];
+    const extensions = [".avy", ".urdf", ".xacro"];
     for (const source of availableSources) {
       if (source.type === "file" && source.supportedFileTypes) {
         extensions.push(...source.supportedFileTypes);
@@ -358,7 +358,7 @@ export default function Workspace(props: WorkspaceProps): JSX.Element {
       // electron extends File with a `path` field which is not available in browsers
       const basePath = (file as { path?: string }).path ?? "";
 
-      if (file.name.endsWith(".foxe")) {
+      if (file.name.endsWith(".avy")) {
         // Extension installation
         try {
           const arrayBuffer = await file.arrayBuffer();
@@ -403,7 +403,7 @@ export default function Workspace(props: WorkspaceProps): JSX.Element {
         // electron extends File with a `path` field which is not available in browsers
         const basePath = (file as { path?: string }).path ?? "";
 
-        if (file.name.endsWith(".foxe")) {
+        if (file.name.endsWith(".avy")) {
           // Extension installation
           try {
             const arrayBuffer = await file.arrayBuffer();

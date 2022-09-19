@@ -44,7 +44,7 @@ type DeviceCodeResponse = {
 type ExtensionResponse = {
   activeVersion: string;
   description?: string;
-  foxe: string;
+  avy: string;
   id: string;
   name: string;
   publisher: string;

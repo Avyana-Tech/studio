@@ -36,8 +36,8 @@
         "mimeType": "application/octet-stream"
       },
       {
-        "ext": "foxe",
-        "name": "Foxglove Studio Extension",
+        "ext": "avy",
+        "name": "Avyana Studio Extension",
         "mimeType": "application/zip"
       },
       {
@@ -74,8 +74,8 @@
         "icon": "resources/icon/McapIcon.ico"
       },
       {
-        "ext": "foxe",
-        "name": "Foxglove Studio Extension",
+        "ext": "avy",
+        "name": "Avyana Studio Extension",
         "mimeType": "application/zip"
       },
       {
@@ -132,9 +132,9 @@
           "LSItemContentTypes": ["dev.foxglove.mcap"]
         },
         {
-          "CFBundleTypeExtensions": ["foxe"],
+          "CFBundleTypeExtensions": ["avy"],
           "CFBundleTypeIconFile": "FoxeIcon",
-          "CFBundleTypeName": "Foxglove Studio Extension File",
+          "CFBundleTypeName": "Avyana Studio Extension File",
           "CFBundleTypeRole": "Viewer",
           "LSHandlerRank": "Default",
           "CFBundleTypeIconSystemGenerated": 1,
@@ -182,10 +182,10 @@
         },
         {
           "UTTypeConformsTo": ["public.data", "public.archive", "public.zip-archive"],
-          "UTTypeDescription": "Foxglove Studio Extension File",
-          "UTTypeIcons": { "UTTypeIconText": "foxe" },
+          "UTTypeDescription": "Avyana Studio Extension File",
+          "UTTypeIcons": { "UTTypeIconText": "avy" },
           "UTTypeIdentifier": "dev.foxglove.extension",
-          "UTTypeTagSpecification": { "public.filename-extension": "foxe" }
+          "UTTypeTagSpecification": { "public.filename-extension": "avy" }
         },
         {
           "UTTypeConformsTo": ["public.xml"],
