@@ -6,7 +6,7 @@ on:
       - "master"
 
 env:
-  IMAGE_NAME: avyana/${{ github.repository }}
+  IMAGE_NAME: avyana/studio
 jobs:
   build-container:
     runs-on: ubuntu-latest
