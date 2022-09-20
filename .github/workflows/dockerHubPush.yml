@@ -4,9 +4,6 @@ on:
   release:
     types: [prereleased, released]
 
-env:
-  IMAGE_NAME: avyana/studio
-  TAG: ${{ github.event.release.tag_name }}
 jobs:
   build-container:
     runs-on: ubuntu-latest
@@ -31,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.IMAGE_NAME }}:${{ env.TAG }}
+          images: avyana/studio
 
       - name: Build and push
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
