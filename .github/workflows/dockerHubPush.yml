@@ -9,8 +9,11 @@ jobs:
   build-container:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+          ssh-key: ${{secrets.repo_ssh}}
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
