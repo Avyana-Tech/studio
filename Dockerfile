@@ -5,7 +5,7 @@ WORKDIR /src
 COPY . ./
 RUN ls -la ./*
 
-RUN yarn install --immutable
+RUN yarn install 
 RUN yarn run web:build:prod
 
 # Release stage
