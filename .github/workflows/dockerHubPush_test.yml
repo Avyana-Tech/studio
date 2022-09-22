@@ -1,8 +1,9 @@
-name: Publish DockerHub image
+name: Publish DockerHub image TEST
 
 on:
-  release:
-    types: [prereleased, released]
+  push:
+    branches:
+      - main
 
 jobs:
   build-container:

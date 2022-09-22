@@ -207,7 +207,7 @@
   "appx": {
     "applicationId": "FoxgloveStudio",
     "backgroundColor": "#f7def6",
-    "displayName": "Foxglove Studio",
+    "displayName": "Avyana Studio",
     "identityName": "Foxglove.Studio",
     "publisher": "CN=Foxglove Technologies, O=Foxglove Technologies, L=San Francisco, S=California, C=US",
     "publisherDisplayName": "Foxglove Technologies",

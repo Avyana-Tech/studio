@@ -12,12 +12,11 @@ import { Player } from "@foxglove/studio-base/players/types";
 class RosbridgeDataSourceFactory implements IDataSourceFactory {
   public id = "rosbridge-websocket";
   public type: IDataSourceFactory["type"] = "connection";
-  public displayName = "Rosbridge (ROS 1 & 2)";
+  public displayName = "Rosbridge Web-Socket";
   public iconName: IDataSourceFactory["iconName"] = "Flow";
   public docsLink = "https://docs.avyana.tech/studio_index";
   public description =
-    "Rosbridge (ROS 1 & 2), Connect to the Avyana Self-Driving Car over WeSockets using the rosbridge_suite package."
-
+    "Rosbridge Web-Socket, Connect to the Avyana Self-Driving Car over WeSockets using the rosbridge_suite package.";
   public formConfig = {
     fields: [
       {
