@@ -3,7 +3,7 @@ name: Publish DockerHub image TEST
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-container:
