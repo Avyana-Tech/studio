@@ -22,7 +22,7 @@ jobs:
         with:
           lfs: true
           ssh-key: ${{secrets.repo_ssh}}
-          fi
+
       - name: Build
         uses: ./.github/actions/docker_build_push
         with:
