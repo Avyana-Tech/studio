@@ -50,7 +50,7 @@ docker run --rm -p "8080:8080: avyana/studio:latest-tagsBuild
 If you want to run the latest nightlyBuild
 
 ```
-docker run --rm -p "8080:8080" avyana/studio:main-nightly
+docker run --rm -p "8080:8080" avyana/studio:master-nightly
 ```
 
 ## CONNECT
