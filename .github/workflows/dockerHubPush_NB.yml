@@ -37,5 +37,5 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: nightlyBuild
+          tags: nightly_build
           labels: ${{ steps.meta.outputs.labels }}
