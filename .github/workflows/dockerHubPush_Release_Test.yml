@@ -1,0 +1,30 @@
+name: docker-build-and-push-humble
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  docker-build-and-push-humble:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        name:
+          - release
+        include:
+          - name: release
+            additional-tag-suffix: ""
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+          ssh-key: ${{secrets.repo_ssh}}
+          fi
+      - name: Build 'autoware-universe'
+        uses: ./.github/actions/docker_build_push
+        with:
+          bake-target: studio
+          tag-suffix: ${{ matrix.additional-tag-suffix }}
