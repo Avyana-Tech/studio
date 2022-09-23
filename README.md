@@ -39,10 +39,18 @@ Or you can even run a dockerimage and access it on the web by
 docker run --rm -p "8080:8080" avyana/studio:latest
 ```
 
-on localhost:8080. This will run the most recent release of the docker image. If you want to run the latest nightlyBuild
+on localhost:8080. This will run the most recent release of the docker image.
+
+To run the latest Tag Build
+```
+docker run --rm -p "8080:8080: avyana/studio_tagBuild:latest
+```
+
+
+If you want to run the latest nightlyBuild
 
 ```
-docker run --rm -p "8080:8080" avyana/studio_nb
+docker run --rm -p "8080:8080" avyana/studio_nb:master
 ```
 
 ## CONNECT
