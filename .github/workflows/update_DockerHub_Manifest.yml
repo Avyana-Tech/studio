@@ -1,0 +1,18 @@
+name: "DockerHub update Names"
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch:
+
+jobs:
+  update-docker-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+          ssh-key: ${{secrets.repo_ssh}}
+
+      - name: Create alias from 

@@ -1,0 +1,27 @@
+name: Publish DockerHub image RELEASE
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  build-container:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+          ssh-key: ${{secrets.repo_ssh}}
+
+      - name: Build and push
+        uses: ./.github/actions/docker_build_push
+        with:
+          bake-target: studio
+          
