@@ -10,3 +10,12 @@ storybook-static/
 
 # Extensions
 *.avy
+
+# Yarn
+.yarn/*
+.yarn/install-state.gz
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/yarn-wrapper.js
+.pnp.*
