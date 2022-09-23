@@ -3,7 +3,7 @@ name: Publish DockerHub image NightlyBuild
 on:
   push:
     tags:
-      - v*
+      - "v*"
 
 jobs:
   build-container:
@@ -25,11 +25,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract metadata (tags, labels) for Docker
+      - name: Docker meta
         id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        uses: docker/metadata-action@v4
         with:
-          images: avyana/studio_tagBuild
+          images: avyana/studio
+          flavor: |
+            latest=auto
+            suffix=-tagsBuild, onlatest=true
 
       - name: Build and push
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc

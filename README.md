@@ -42,15 +42,15 @@ docker run --rm -p "8080:8080" avyana/studio:latest
 on localhost:8080. This will run the most recent release of the docker image.
 
 To run the latest Tag Build
-```
-docker run --rm -p "8080:8080: avyana/studio_tagBuild:latest
-```
 
+```
+docker run --rm -p "8080:8080: avyana/studio:latest-tagsBuild
+```
 
 If you want to run the latest nightlyBuild
 
 ```
-docker run --rm -p "8080:8080" avyana/studio_nb:master
+docker run --rm -p "8080:8080" avyana/studio:main-nightly
 ```
 
 ## CONNECT
