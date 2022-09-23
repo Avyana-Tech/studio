@@ -23,8 +23,8 @@ jobs:
           lfs: true
           ssh-key: ${{secrets.repo_ssh}}
           fi
-      - name: Build 'autoware-universe'
+      - name: Build
         uses: ./.github/actions/docker_build_push
         with:
-          bake-target: studio
+          bake-target: studio-test
           tag-suffix: ${{ matrix.additional-tag-suffix }}
