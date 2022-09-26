@@ -24,7 +24,7 @@ import { OpenDialogViews } from "./types";
 const HELP_ITEMS: ActionListItem[] = [
   {
     id: "docs",
-    href: "https://docs.avyana.tech/studio_index",
+    href: "https://docs.avyana.tech/studio",
     target: "_blank",
     children: "Browse docs",
   },

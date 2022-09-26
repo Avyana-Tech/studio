@@ -42,7 +42,7 @@ const helpMenuItems: Map<SectionKey, { subheader: string; links: HelpInfo[] }> =
     {
       subheader: "External resources",
       links: [
-        { title: "Browse docs", url: "https://docs.avyana.tech/studio_index" }
+        { title: "Browse docs", url: "https://docs.avyana.tech/studio" }
       ],
     },
   ],

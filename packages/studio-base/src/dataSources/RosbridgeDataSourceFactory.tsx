@@ -14,7 +14,7 @@ class RosbridgeDataSourceFactory implements IDataSourceFactory {
   public type: IDataSourceFactory["type"] = "connection";
   public displayName = "Rosbridge Web-Socket";
   public iconName: IDataSourceFactory["iconName"] = "Flow";
-  public docsLink = "https://docs.avyana.tech/studio_index";
+  public docsLink = "https://docs.avyana.tech/studio";
   public description =
     "Rosbridge Web-Socket, Connect to the Avyana Self-Driving Car over WeSockets using the rosbridge_suite package.";
   public formConfig = {

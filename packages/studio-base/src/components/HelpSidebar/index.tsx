@@ -34,7 +34,7 @@ const helpMenuItems: Map<SectionKey, { subheader: string; links: HelpInfo[] }> =
       subheader: "External resources",
       links: [
         ...(isDesktopApp() ? [] : [{ title: "Desktop app", url: "https://foxglove.dev/download" }]),
-        { title: "Browse docs", url: "https://docs.avyana.tech/studio_index" },
+        { title: "Browse docs", url: "https://docs.avyana.tech/studio" },
       ],
     },
   ],
